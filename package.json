@@ -7,9 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
+    "build": "npm run build",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cdk": "cdk"
   },
@@ -19,8 +17,7 @@
     "aws-cdk-lib": "^2.50.0",
     "esbuild": "^0.15.14",
     "eslint-config-custom": "*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "latest"
   },
   "engines": {
     "node": ">=14.0.0"

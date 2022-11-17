@@ -65,5 +65,30 @@ export class ServiceA extends Stack {
       }),
       memoryReservationMiB: 512,
     });
+
+    const service = new Ec2Service(this, "Service", {
+      cluster: ecsCluster,
+      taskDefinition,
+      desiredCount: 1,
+      placementConstraints: [PlacementConstraint.distinctInstances()],
+      capacityProviderStrategies: [
+        {
+          capacityProvider: capacityProvider.capacityProviderName,
+          weight: 100,
+        },
+      ],
+    });
+
+    const targetGroupScale = service.autoScaleTaskCount({
+      maxCapacity: 1,
+    });
+
+    targetGroupScale.scaleOnCpuUtilization("ScaleUpCPU", {
+      targetUtilizationPercent: 75,
+    });
+
+    targetGroupScale.scaleOnMemoryUtilization("ScaleUpMemory", {
+      targetUtilizationPercent: 75,
+    });
   }
 }

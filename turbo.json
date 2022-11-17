@@ -1,9 +1,0 @@
-{
-  "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["$CDK_DEFAULT_ACCOUNT"],
-  "pipeline": {
-    "deploy": {
-      "dependsOn": ["$CDK_DEFAULT_ACCOUNT"]
-    }
-  }
-}
