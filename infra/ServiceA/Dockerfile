@@ -11,7 +11,7 @@ COPY apps/service-a-container ./apps/service-a-container
 COPY packages/logger ./packages/logger
 COPY packages/tsconfig ./packages/tsconfig
 
-RUN npm install && npm run build --workspace=logger && npm run build --workspace=service-a-container
+RUN npm install && npm run build 
 
 FROM node:16 
 
