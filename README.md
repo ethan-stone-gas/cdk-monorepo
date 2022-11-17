@@ -12,5 +12,5 @@ infrastructure code at the root and written inside infra, and all source code ar
 
 The second idea is to split up source code more granularly. This is an idea taken from external api. Just because a
 service is using containers and functions doesn't mean they have to be organized in the same place. To me it makes sense
-to put functions and containers under two complete workspaces/packages because they are built/bundled in completely
-different ways, so separately them makes it easier to manage them.
+to put functions and containers under two completely workspaces/packages because they are built/bundled in completely
+different ways, so separating them makes it easier to manage them.
