@@ -1,6 +1,6 @@
 # What is this?
 
-This is a working demo of using using cdk with a monorepo and with one of the services being build with docker.
+This is a working demo of using using cdk with a monorepo and with one of the services being built with docker.
 
 ## Core Ideas
 
