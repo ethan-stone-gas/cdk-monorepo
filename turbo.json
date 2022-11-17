@@ -1,15 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["$CDK_DEFAULT_ACCOUNT"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
-    },
-    "lint": {
-      "outputs": []
-    },
-    "dev": {
-      "cache": false
+    "deploy": {
+      "dependsOn": ["$CDK_DEFAULT_ACCOUNT"]
     }
   }
 }
