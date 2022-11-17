@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build",
+    "build": "npm run build --workspaces --if-present",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cdk": "cdk"
   },
